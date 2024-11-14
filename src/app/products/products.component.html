@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <div class="row my-5">
+<!-- structural directives -->
+        <div class="col-lg-4" *ngFor="let perfume of myProducts">
+            <div class="card bg-dark text-light" style="width: 20rem;">
+                <img src="{{perfume.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{perfume.name}} - {{perfume.qty}}
+                    <span class="badge text-bg-success" *ngIf="perfume.stock > 0">Available</span>
+                    <span class="badge text-bg-secondary" *ngIf="perfume.stock == 0">Out of stock</span>
+                  </h5>
+                  <p class="card-text">{{perfume.description}}.</p>
+                  <a href="#" class="btn btn-outline-warning">Rs. {{perfume.price}}</a>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+</div>
